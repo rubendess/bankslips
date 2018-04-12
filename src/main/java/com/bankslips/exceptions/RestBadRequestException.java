@@ -1,0 +1,14 @@
+package com.bankslips.exceptions;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class RestBadRequestException extends RuntimeException {
+
+    public RestBadRequestException() { super(); }
+
+    public RestBadRequestException(String exception) {
+        super(exception);
+    }
+}
